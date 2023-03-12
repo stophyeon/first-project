@@ -1,16 +1,33 @@
-// 버튼을 누르면, 여태까지 넣었던 애들 합쳐서 계산
-// 계산 후에 그거에 따라 점수 획득
-// 받아온 최고 최저에 따라서 계산 
-let outerpoint;
+//추가부 - > 3가지 옷 다 넣기 
+// 아직 코드 간소화 못했음
+
+
+let outerpoint, toppoint, bottompoint ;
 
 var outers = document.getElementsByName('outer');
+var tops = document.getElementsByName('top');
+var bottoms = document.getElementsByName('bottom');
 
 function getouterpoint(event) {
   outerpoint = event.target.value;
 } // radio에 따른 outerpoint.
+function gettoppoint(event) {
+  toppoint = event.target.value;
+} 
+function getbottompoint(event) {
+  bottompoint = event.target.value;
+} 
 
 for (i = 0; i < outers.length; i++) {
   outers[i].addEventListener('click', getouterpoint);
+} //상세 구현부
+
+for (i = 0; i < tops.length; i++) {
+  tops[i].addEventListener('click', gettoppoint);
+} //상세 구현부
+
+for (i = 0; i < bottoms.length; i++) {
+  bottoms[i].addEventListener('click', getbottompoint);
 } //상세 구현부
 
 function checkyourpoint(a) {
@@ -21,6 +38,20 @@ function checkyourpoint(a) {
   } else if (outerpoint == 'cardigan') {
     a = a + 3;
   }
+
+  if (toppoint == 'sweatshirt') {
+    a = a + 4;
+  } else if (toppoint == 'tshirt') {
+    a = a + 1;
+  }
+
+  if (bottompoint == 'pants') {
+    a = a + 2;
+  } else if (bottompoint == 'shortpants') {
+    a = a + 1;
+  }
+
+
   return a;
 }; //옷별로 내 포인트 획득 부 
 
