@@ -1,34 +1,26 @@
-//추가부 - > 3가지 옷 다 넣기 
-// 아직 코드 간소화 못했음
+// 간소화 완료
+// 추위 타는지 더위 타는지 , 오전 오후 저녁 버전만 추가하면 됨
 
 
-let outerpoint, toppoint, bottompoint ;
+let outerpoint, toppoint, bottompoint;
 
-var outers = document.getElementsByName('outer');
-var tops = document.getElementsByName('top');
-var bottoms = document.getElementsByName('bottom');
+document.getElementsByName('outer').forEach(function (element) {
+element.addEventListener('click', function (event) {
+outerpoint = event.target.value;
+});
+});
 
-function getouterpoint(event) {
-  outerpoint = event.target.value;
-} // radio에 따른 outerpoint.
-function gettoppoint(event) {
-  toppoint = event.target.value;
-} 
-function getbottompoint(event) {
-  bottompoint = event.target.value;
-} 
+document.getElementsByName('top').forEach(function (element) {
+element.addEventListener('click', function (event) {
+toppoint = event.target.value;
+});
+});
 
-for (i = 0; i < outers.length; i++) {
-  outers[i].addEventListener('click', getouterpoint);
-} //상세 구현부
-
-for (i = 0; i < tops.length; i++) {
-  tops[i].addEventListener('click', gettoppoint);
-} //상세 구현부
-
-for (i = 0; i < bottoms.length; i++) {
-  bottoms[i].addEventListener('click', getbottompoint);
-} //상세 구현부
+document.getElementsByName('bottom').forEach(function (element) {
+element.addEventListener('click', function (event) {
+bottompoint = event.target.value;
+});
+});
 
 function checkyourpoint(a) {
   if (outerpoint == 'pedding') {
@@ -74,4 +66,3 @@ document.getElementById('button').addEventListener('click', function(event) {
   yourlook(yourpoint);
   console.log(yourpoint) ;
 }); //버튼 클릭시 보이는 모습 설정 
-
