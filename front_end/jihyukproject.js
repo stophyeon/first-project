@@ -30,7 +30,6 @@ function checkyourpoint(a) {
   } else if (outerpoint == 'cardigan') {
     a = a + 3;
   }
-
   if (toppoint == 'sweatshirt') {
     a = a + 4;
   } else if (toppoint == 'tshirt') {
