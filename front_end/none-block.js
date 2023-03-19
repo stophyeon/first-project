@@ -1,6 +1,5 @@
 const toggleBtn = document.querySelector('#toggle-btn'); // 버튼 요소를 선택
 const target = document.querySelector('#target'); // 표시/숨김 대상 요소를 선택
-let isShown = false; // 현재 표시되고 있는지 여부를 나타내는 변수
 
 toggleBtn.addEventListener('click', () => {
   if (target.style.display !== 'none') {
