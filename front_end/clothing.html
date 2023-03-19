@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플젝 제목</title>
+</head>
+<body>
+  <h1>오늘의 코디</h1>
+  <!--0000년 0월 00일-->
+  <h2><span id="date"></span></h2>
+    <script>
+      let today = new Date();
+      let options = { year: 'numeric', month: 'long', day: 'numeric' };  
+      document.getElementById('date').textContent = today.toLocaleDateString('ko-KR', options);
+    </script>
+
+    <!--00:00:00-->
+        <section class="time">
+          <span class="time hour">00</span>
+          <span class="divider">:</span>
+          <span class="time min">00</span>
+          <span class="divider">:</span>
+          <span class="time sec">00</span>
+          <script src="./index.js"></script>
+          </section>
+    <!--달력-->
+	<h1 id="month-year"></h1>
+	<button onclick="prevMonth()">이전 달</button>
+	<button onclick="nextMonth()">다음 달</button>
+	<table>
+		<thead>
+			<tr>
+				<th>일</th>
+				<th>월</th>
+				<th>화</th>
+				<th>수</th>
+				<th>목</th>
+				<th>금</th>
+				<th>토</th>
+			</tr>
+		</thead>
+		<tbody id="calendar-body"></tbody>
+	</table> 
+  <script src="./index.js"></script>
+<h1> 존나큰 사람</h1>
+</html>
