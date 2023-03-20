@@ -34,3 +34,16 @@ buttons.forEach(function(button) {
     });
   });
  
+
+var iframeButton = document.getElementById("iframebutton");
+
+iframeButton.addEventListener("click", function () {
+  var iframe = document.getElementById("myIframe");
+  if (iframe.style.display === "none") {
+    iframe.style.display = "block";
+    iframe.src = "./clothesroom.html"; // 옷장파일
+  } else {
+    iframe.style.display = "none";
+    iframe.src = "";
+  }
+});
