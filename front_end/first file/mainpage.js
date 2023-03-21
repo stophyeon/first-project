@@ -35,15 +35,20 @@ buttons.forEach(function(button) {
   });
  
 
-var iframeButton = document.getElementById("iframebutton");
+  var iframeButton = document.getElementById("iframebutton");
 
-iframeButton.addEventListener("click", function () {
-  var iframe = document.getElementById("myIframe");
-  if (iframe.style.display === "none") {
-    iframe.style.display = "block";
-    iframe.src = "./clothesroom.html"; // 옷장파일
-  } else {
-    iframe.style.display = "none";
-    iframe.src = "";
-  }
-});
+  iframeButton.addEventListener("click", function () {
+    var iframe = document.getElementById("myIframe");
+    if (iframe.style.display === "none") {
+      iframe.style.display = "block";
+      iframe.style.width = "800px"; // width값 변경
+      iframe.style.height = "600px"; // height값 변경
+      iframe.src = "./clothesroom.html"; // 옷장파일
+    } else {
+      iframe.style.display = "none";
+      iframe.style.width = "0"; // width값 초기화
+      iframe.style.height = "0"; // height값 초기화 // 지금 근데 문제가 . 버튼 누르면 다시 안나올 
+      iframe.src = "";
+    }
+
+  });
