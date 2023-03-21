@@ -1,4 +1,4 @@
-weatherbutton {
+.weatherbutton {
     background-color: white;
     padding: 10px;
     border: none;
@@ -27,15 +27,12 @@ weatherbutton {
   
   .weather-buttons {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 150px;
   }
   
-  .weatherbutton {
-    margin: 0 40px;
-    left : 20%;
-  }
+
   
   .clothesroompage {
     position: absolute;
