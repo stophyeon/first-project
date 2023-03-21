@@ -1,6 +1,3 @@
-// 간소화 완료
-// 추위 타는지 더위 타는지 , 오전 오후 저녁 버전만 추가하면 됨
-
 
 let outerpoint, toppoint, bottompoint, dayweather;
 
