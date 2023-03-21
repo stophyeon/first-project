@@ -1,3 +1,6 @@
+// 간소화 완료
+// 추위 타는지 더위 타는지 , 오전 오후 저녁 버전만 추가하면 됨
+
 
 let outerpoint, toppoint, bottompoint, dayweather;
 
@@ -102,18 +105,10 @@ function yourlook(yourpoint) {
 }; //실제 활동시는 그림 구현
 
 
-document.getElementById('button').addEventListener('click', function(event) {
+document.getElementById('submitbutton').addEventListener('click', function(event) {
   var yourpoint = 0; // 추운지 더운지에 따라서 내 포인트 변경 
   changeweatherpoint() ;
   yourpoint = checkyourpoint(yourpoint);
   yourlook(yourpoint);
   console.log(yourpoint) ;
 }); //버튼 클릭시 보이는 모습 설정 
-
-var button = document.getElementById("button")
-
-button.addEventListener("click", function() {
-  button.parentNode.removeChild(button);
-  var htmlElement = document.getElementsByTagName("html")[0];
-  htmlElement.parentNode.removeChild(htmlElement);
-});

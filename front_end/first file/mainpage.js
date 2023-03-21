@@ -32,7 +32,7 @@ buttons.forEach(function(button) {
       });
       button.classList.add("active");
     });
-  });
+  }); //여기까지 날씨부 캐릭터 삽입
  
 
   var iframeButton = document.getElementById("iframebutton");
@@ -41,8 +41,8 @@ buttons.forEach(function(button) {
     var iframe = document.getElementById("myIframe");
     if (iframe.style.display === "none") {
       iframe.style.display = "block";
-      iframe.style.width = "800px"; // width값 변경
-      iframe.style.height = "600px"; // height값 변경
+      iframe.style.width = "1458px"; // width값 변경
+      iframe.style.height = "228px"; // height값 변경
       iframe.src = "./clothesroom.html"; // 옷장파일
     } else {
       iframe.style.display = "none";
@@ -50,5 +50,4 @@ buttons.forEach(function(button) {
       iframe.style.height = "0"; // height값 초기화 // 지금 근데 문제가 . 버튼 누르면 다시 안나올 
       iframe.src = "";
     }
-
-  });
+  } );
