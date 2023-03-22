@@ -13,72 +13,62 @@ function clock() {
 
 setInterval(clock, 1000); //1초
 
-//지혁이 옷
-let outerpoint, toppoint, bottompoint;
+// 달력
+let today1 = new Date();
+let currentMonth = today1.getMonth();
+let currentYear = today1.getFullYear();
 
-document.getElementsByName('outer').forEach(function (element) {
-element.addEventListener('click', function (event) {
-outerpoint = event.target.value;
-});
-});
+function prevMonth() {
+    if (currentMonth === 0) {
+        currentMonth = 11;
+        currentYear--;
+    } else {
+        currentMonth--;
+    }
+    showCalendar(currentMonth, currentYear);
+}
 
-document.getElementsByName('top').forEach(function (element) {
-element.addEventListener('click', function (event) {
-toppoint = event.target.value;
-});
-});
+function nextMonth() {
+    if (currentMonth === 11) {
+        currentMonth = 0;
+        currentYear++;
+    } else {
+        currentMonth++;
+    }
+    showCalendar(currentMonth, currentYear);
+}
 
-document.getElementsByName('bottom').forEach(function (element) {
-element.addEventListener('click', function (event) {
-bottompoint = event.target.value;
-});
-});
+function showCalendar(month, year) {
+    let firstDay = new Date(year, month, 1);
+    let lastDay = new Date(year, month + 1, 0);
+    let tbody = document.getElementById('calendar-body');
+    tbody.innerHTML = '';
 
-function checkyourpoint(a) {
-  if (outerpoint == 'pedding') {
-    a = a + 15;
-  } else if (outerpoint == 'coat') {
-    a = a + 7;
-  } else if (outerpoint == 'cardigan') {
-    a = a + 3;
-  }
-  if (toppoint == 'sweatshirt') {
-    a = a + 4;
-  } else if (toppoint == 'tshirt') {
-    a = a + 1;
-  }
-
-  if (bottompoint == 'pants') {
-    a = a + 2;
-  } else if (bottompoint == 'shortpants') {
-    a = a + 1;
-  }
-
-
-  return a;
-}; //옷별로 내 포인트 획득 부 
-
-var hottestweatherpoint = 11; // 여기엔 api 활용 값을 넣어줘야됨 
-var coolestweatherpoint = 3;
-
-function yourlook(yourpoint) {
-  if (yourpoint >= hottestweatherpoint) {
-    console.log('더워');
-  } else if (yourpoint <= coolestweatherpoint) {
-    console.log('추워');
-  } else if (yourpoint > coolestweatherpoint && yourpoint < hottestweatherpoint) {
-    console.log('굳');
-  } 
-}; //실제 활동시는 그림 구현
-
-document.getElementById('button').addEventListener('click', function(event) {
-  var yourpoint = 0;
-  yourpoint = checkyourpoint(yourpoint);
-  yourlook(yourpoint);
-  console.log(yourpoint) ;
-}); //버튼 클릭시 보이는 모습 설정 
-
-function showImage() {
-    var image = document.getElementById("myImage");
-    image.style.display = "block";
-  }
+    // 날짜 채우기
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+        let row = document.createElement('tr');
+        for (let j = 0; j < 7; j++) {
+            let cell = document.createElement('td');
+            if (i === 0 && j < firstDay.getDay()) {
+                cell.innerHTML = '';
+            } else if (date > lastDay.getDate()) {
+                cell.innerHTML = '';
+            } else {
+                cell.innerHTML = date;
+                if (date === today1.getDate() && year === today1.getFullYear() && month === today1.getMonth()) {
+                    cell.classList.add('current');
+                }
+                date++;
+    
+                cell.addEventListener('click', function() {
+                    alert(year + '년 ' + (month + 1) + '월 ' + this.innerHTML + '일');
+                });
+            }
+            row.appendChild(cell);
+        }
+        tbody.appendChild(row);
+    }
+    document.getElementById('month-year').innerHTML = year + '년 ' + (month + 1) + '월';
+}
+showCalendar(currentMonth, currentYear);
