@@ -20,6 +20,7 @@ buttons.forEach(function(button) {
     img.style.width = "200px";
     character.appendChild(img);
   });
+  
 });
 
 
