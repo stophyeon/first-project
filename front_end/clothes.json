@@ -1,0 +1,33 @@
+{
+"items": [
+  {
+    "type": "outer",
+    "name": "pedding"
+  },
+  {
+    "type": "outer",
+    "name": "coat"
+  },
+  {
+    "type": "outer",
+    "name": "cardigan"
+  },
+  {
+    "type": "top",
+    "name": "sweatshirt"
+  },
+  {
+    "type": "top",
+    "name": "tshrit"
+  },
+  {
+    "type": "bottom",
+    "name": "pants"
+  },
+  {
+    "type": "bottom",
+    "name": "shortpants"
+
+  }
+]
+}
