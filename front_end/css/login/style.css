@@ -1,0 +1,84 @@
+/*#0074e9 #e7223d*/
+h1 {text-align: center; margin:50px auto 30px;}
+h1 a {}
+h1 a img {width: 250px;}
+main {width: 500px; margin:0 auto;}
+main #loginFrm {border-bottom: 1px solid #ccc; margin-bottom: 20px; padding-bottom: 20px;}
+main #loginFrm fieldset {}
+main #loginFrm fieldset ul {}
+main #loginFrm fieldset ul li {
+    border:1px solid #ccc; background-color: #fff;
+    display: flex; flex-flow:row nowrap;
+    margin-bottom: 10px;
+    position: relative;
+}
+main #loginFrm fieldset ul .error {
+    color: #e7223d; padding: 10px; display: none;
+}
+main #loginFrm fieldset ul .id_error {border:0;}
+main #loginFrm fieldset ul .pw_error{border: 0;}
+main #loginFrm fieldset ul li span {}
+main #loginFrm fieldset ul li .id_bg {
+    border-right: 1px solid #ccc;
+    padding: 20px; width: 50px; 
+    background-color: #eee;
+    background-image: url(/front_end/html/login/images/icon_id.png);
+    background-position: -1px 2px;
+    width: 21px; height: 1px;
+}
+main #loginFrm fieldset ul li .pw_bg {
+    border-right: 1px solid #ccc;
+    padding: 20px; width: 50px; 
+    background-color: #f5f5f5;
+    background-image: url(/front_end/html/login/images/icon_pw.png);
+    background-position: 4px -1px;
+    width: 21px; height: 21px;
+}
+main #loginFrm fieldset ul li span input {width: 400px; height: 40px; border: 0; padding-left: 10px;}
+main #loginFrm fieldset ul li span input::placeholder {font-size: 0.95rem; color: #736ea7;}
+main #loginFrm fieldset ul li span input[type=text] {}
+main #loginFrm fieldset ul li span input[type= password] {}
+main #loginFrm fieldset ul .pw_show_hide {
+    background-image: url(/front_end/html/login/images/icon_pw_hide.png);
+    background-position: -57px -3px;
+    width: 28px; height: 28px;
+    position: absolute; right: 5px; top:6px;
+}
+main #loginFrm fieldset .btm {
+    display: flex; flex-flow: row nowrap;
+    padding: 15px 0; justify-content: space-between;
+}
+main #loginFrm fieldset .btm p {}
+main #loginFrm fieldset .btm p label {}
+main #loginFrm fieldset .btm p label input[name=login_y] {appearance: none;}
+main #loginFrm fieldset .btm p label input[name=login_y] + span::before{     /*선택 안됐을때 span*/
+    background-color: #fff;
+    border:1px solid #ccc;
+    content:'';display: inline-block;
+    width: 21px; height: 21px;
+    background-image: url(/front_end/html/login/images/icon_zip.png);
+    background-position: 121px -26px;
+    margin-right: 5px;
+}
+main #loginFrm fieldset .btm p label input[name=login_y]:checked + span::before {    /*선택됐을때 span*/
+    background-position: -115px -32px;
+} 
+main #loginFrm fieldset .btm p label span {}
+main #loginFrm fieldset .btm .idpw_search {color: #00060c;}
+main #loginFrm fieldset .btm .idpw_search::after{
+    content: ''; display: inline-block;
+    width: 13px; height: 14px;
+    background-image: url(/front_end/html/login/images/icon.svg.png);
+    background-position: -29px -8px;
+    margin-left: 5px;
+}
+main #loginFrm fieldset #login_btn {
+    background-color:#00e923;
+    width: 100%; color: #070000; padding: 20px 0;
+}
+main .join_link {
+    border: 1px solid #aaa; color: #0074e9; 
+    display: block; text-align: center; background-color: #fff; padding:20px 0; width: 100%; /*회원가입 은 a태그로 해서 따로 button을 안만들었기 때문*/
+    box-shadow: 0 2px 0 #eee;
+}
+footer {color: #333; text-align: center; font-size: 0.85rem; margin-top: 30px;}
