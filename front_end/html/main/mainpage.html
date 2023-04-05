@@ -47,9 +47,7 @@
       <h3 class="float-md-start mb-0">WeaTherIa</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"></a>
-      </nav>
-      
-      
+      </nav>      
     </div>
     
 
@@ -71,16 +69,14 @@
         
   </main>
   
-  <div class ="weather-buttons">
-
-    <button id="morning" class="weatherbutton"  > 오전이에요!</button>
-    <button id="afternoon" class="weatherbutton"> 오후에요!  </button>
-    <button id="night" class="weatherbutton"> 저녁이에요!  </button>
- <!-- 가운데 오전 오후 저녁 추가부  --> 
+  <div class="weather-buttons">
+    <button id="morning" class="weatherbutton">오전이에요!</button>
+    <button id="afternoon" class="weatherbutton">오후에요!</button>
+    <button id="night" class="weatherbutton">저녁이에요!</button>
   </div>
+  <p id="temperature">지금의 온도는~?</p>
 
-
-
+  
 
 
   <footer class="mt-auto text-white-50">
@@ -94,19 +90,19 @@
 <div class = "clothesroompage" id="clothesroompage"> <!---이 부 부터는 기존 clothesroompage, 즉. 옷을 입히는 부 구현-->
 
   <button type="button" class="clothesroompageopen" id="clothesroompageopen"><img  src="clothsbuttonimg.png"></button>
-  <div class = "clothesroom-button" , id = "clothesroom-button">
+  <div class = "clothesroom-button" , id = "clothesroom-button", id="wardrobe">
 
 <!---실제 옷장 .-->
-    <h9>아우터<br>
+    아우터<br>
     <input type='radio' name='outer' value='pedding'  id='pedding' checked/> 패딩 
-    <label for="pedding"><i class="fa-solid fa-snowman"></i></label>
+    <id for="pedding"><i class="fa-solid fa-snowman"></i>
     <input type='radio' name='outer' value='coat' label="coat" id='coat' />  코트 
     <label for="coat"><i class="fa-solid fa-leaf"></i></label>
     <input type='radio' name='outer' value='cardigan' label="cardigan" id='cardigan' />  가디건 
     <i class="fa-solid fa-mug-saucer"></i><br>
 
     <input type='radio' name='outer' value='nothing' label="nothing" id='nothing' />  아우터는 입지 않을래요!<br>
-    </h9>
+    
     윗옷<br>
     <input type='radio' name='top' value='sweatshirt' id='sweatshirt' checked/> 맨투맨
     <i class="fa-solid fa-mars-double"></i>
@@ -148,10 +144,6 @@
 <div class="sidebar">
   <button class="join_link" id="log_btn" onclick="window.location.href='/front_end/html/login/login.html'">로그인</button>
 </div>
-
-    
-    
-
 
 <script src = "/front_end/js/main/mainpage.js">
 
