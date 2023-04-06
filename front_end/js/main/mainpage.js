@@ -1,3 +1,4 @@
+
 // var buttons = document.querySelectorAll(".weatherbutton");
 // var character = document.getElementById("character"); // 이미지가 추가될 요소
 

@@ -22,7 +22,7 @@ main #loginFrm fieldset ul li .id_bg {
     border-right: 1px solid #ccc;
     padding: 20px; width: 50px; 
     background-color: #eee;
-    background-image: url(/first-project/front_end/html/login/images/icon_id.png);
+    background-image: url(/front_end/html/login/images/icon_id.png);
     background-position: -1px 2px;
     width: 21px; height: 1px;
 }
@@ -30,7 +30,7 @@ main #loginFrm fieldset ul li .pw_bg {
     border-right: 1px solid #ccc;
     padding: 20px; width: 50px; 
     background-color: #f5f5f5;
-    background-image: url(/first-project/front_end/html/login/images/icon_pw.png);
+    background-image: url(/front_end/html/login/images/icon_pw.png);
     background-position: 4px -1px;
     width: 21px; height: 21px;
 }
@@ -39,7 +39,7 @@ main #loginFrm fieldset ul li span input::placeholder {font-size: 0.95rem; color
 main #loginFrm fieldset ul li span input[type=text] {}
 main #loginFrm fieldset ul li span input[type= password] {}
 main #loginFrm fieldset ul .pw_show_hide {
-    background-image: url(/first-project/front_end/html/login/images/icon_pw_hide.png);
+    background-image: url(/front_end/html/login/images/icon_pw_hide.png);
     background-position: -57px -3px;
     width: 28px; height: 28px;
     position: absolute; right: 5px; top:6px;
@@ -56,7 +56,7 @@ main #loginFrm fieldset .btm p label input[name=login_y] + span::before{     /*ì
     border:1px solid #ccc;
     content:'';display: inline-block;
     width: 21px; height: 21px;
-    background-image: url(/first-project/front_end/html/login/images/icon_zip.png);
+    background-image: url(/front_end/html/login/images/icon_zip.png);
     background-position: 121px -26px;
     margin-right: 5px;
 }
@@ -68,7 +68,7 @@ main #loginFrm fieldset .btm .idpw_search {color: #00060c;}
 main #loginFrm fieldset .btm .idpw_search::after{
     content: ''; display: inline-block;
     width: 13px; height: 14px;
-    background-image: url(/first-project/front_end/html/login/images/icon.svg.png);
+    background-image: url(/front_end/html/login/images/icon.svg.png);
     background-position: -29px -8px;
     margin-left: 5px;
 }

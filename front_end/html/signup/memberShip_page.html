@@ -3,13 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <title>WeaTherla : 회원가입</title>
-        <link rel="stylesheet" href="new_main.css">
+        <link rel="stylesheet" href="/front_end/css/signup/new_main.css">
         
     </head>
     
     <body>
         <div id="header">
-            <a target="_blank" title="WeaTherla 회원 가입 페이지"><img src="..//memberShip_page/images/m_logo_image.png"  width="800" height="300" id="logo"></a>
+
+            <a target="_blank" title="WeaTherla 회원 가입 페이지"><img src="images/m_logo_image.png"  width="800" height="300" id="logo"></a>
+
         </div>
 
         <div id= "wrapper">
@@ -34,7 +36,9 @@
                     <span class="box int_pass">
                         <input type="text" id="pswd1" class="int" maxlength="30">
                         <span id="alertTxt">사용불가</span>
-                        <img src="../memberShip_page/images/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
+
+                        <img src="images/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
+
                     </span>
                     <span class="error_next_box"></span>
                 </div>
@@ -44,7 +48,9 @@
                     <h3 class="join_title"><label for="pswd2">비밀번호 재확인</label></h3>
                     <span class="box int_pass_check">
                         <input type="text" id="pswd2" class="int" maxlength="20">
-                        <img src="../memberShip_page/images/m_icon_check_disable.png" id="pswd2_img1" class="pswdImg">
+
+                        <img src="images/m_icon_check_disable.png" id="pswd2_img1" class="pswdImg">
+
                     </span>
                     <span class="error_next_box"></span>
                 </div>
@@ -137,9 +143,9 @@
 
                 <!-- 최종 가입 하기 버튼-->
                 <div class="btn_area">
-                    <button type="button" id="btnJoin">
-                        <span>최종가입완료</span>
-                    </button>
+
+                    <button class="join_link" id="btnJoin" onclick="window.location.href='/front_end/html/login/login.html'">최종가입완료</button>
+
                 </div>
 
                 
@@ -149,7 +155,9 @@
 
         </div> 
         <!-- wrapper -->
-    <script src="main.js"></script>
+
+    <script src="/front_end/js/signup/main.js"></script>
+
     </body>
 
     <footer>

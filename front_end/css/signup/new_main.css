@@ -136,7 +136,7 @@ select {
     width: 100%;
     height: 29px;
     font-size: 15px;
-    background: #fff url(../memberShip_page/images/sel_arr_2x.gif) 100% 50% no-repeat;
+    background: #fff url(/first-project/front_end/html/signup/images/sel_arr_2x.gif) 100% 50% no-repeat;
     background-size: 20px 8px;
     -webkit-appearance: none;
     display: inline-block;
