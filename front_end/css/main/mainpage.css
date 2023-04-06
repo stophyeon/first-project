@@ -111,3 +111,14 @@ input[id="menuicon"]:checked + label + div {right:0;}
     display : none;
   }
 
+  label {
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  .weather-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 50px;
+  }
+  

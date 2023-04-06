@@ -70,12 +70,31 @@
         
   </main>
   
-  <div class ="weather-buttons">
+  <div class="weather-buttons">
+    <label>
+      <input type="radio" name="day" value="morning">
+      오전이에요! 
+    </label>
+    <label>
+      <input type="radio" name="day" value="afternoon">
+      오후에요!
+    </label>
+    <label>
+      <input type="radio" name="day" value="evening">
+      저녁이에요!
+    </label>
+  </div>
+  
 
-    <button id="morning" class="weatherbutton"  > 오전이에요!</button>
-    <button id="afternoon" class="weatherbutton"> 오후에요!  </button>
-    <button id="night" class="weatherbutton"> 저녁이에요!  </button>
  <!-- 가운데 오전 오후 저녁 추가부  --> 
+  </div>
+
+  <div class="yourclothes">
+    <input type="text" name="yourouter" id="yourouter" readonly>
+    <input type="text" name="yourtop" id="yourtop" readonly>
+    <input type="text" name="yourbottom" id="yourbottom" readonly>
+    <input type="text" name="youretc" id="youretc" readonly>
+    <p id="yourcloth"></p>
   </div>
 
 
@@ -97,7 +116,7 @@
 
 <!---실제 옷장 .-->
     <h9>아우터<br>
-    <input type='radio' name='outer' value='pedding'  id='pedding' checked/> 패딩 
+    <input type='radio' name='outer' value='pedding'  id='pedding' /> 패딩 
     <label for="pedding"><i class="fa-solid fa-snowman"></i></label>
     <input type='radio' name='outer' value='coat' label="coat" id='coat' />  코트 
     <label for="coat"><i class="fa-solid fa-leaf"></i></label>
@@ -107,26 +126,29 @@
     <input type='radio' name='outer' value='nothing' label="nothing" id='nothing' />  아우터는 입지 않을래요!<br>
     </h9>
     윗옷<br>
-    <input type='radio' name='top' value='sweatshirt' id='sweatshirt' checked/> 맨투맨
+    <input type='radio' name='top' value='sweatshirt' id='sweatshirt' /> 맨투맨
     <i class="fa-solid fa-mars-double"></i>
     <input type='radio' name='top' value='tshirt' id='tshirt' /> 티셔츠 
     <i class="fa-solid fa-shirt"></i> <Br>
     <input type='radio' name='top' value='shirts' id='shirts' />   셔츠 /원피스
     <i class="fa-solid fa-person-dress"></i>
+
     <br>
 
     바지<br>
-    <input type='radio' name='bottom' value='pants' id='pants' checked/> 바지 
+    <input type='radio' name='bottom' value='pants' id='pants' /> 바지 
     <i class="fa-solid fa-person"></i>
     <input type='radio' name='bottom' value='shortpants' id='shortpants' />  짧은바지 
     <i class="fa-solid fa-person-half-dress"></i>
     <br>
 
     기타 용품<br>
-    <input type='radio' name='etc' value='muffler' id='muffler' checked/> 목도리
+    <input type='radio' name='etc' value='muffler' id='muffler' /> 목도리
     <i class="fa-solid fa-snowflake"></i>
     <input type='radio' name='etc' value='beanie' id='beanie' /> 모자
     <i class="fa-solid fa-hat-cowboy-side"></i>
+    
+    <input type='radio' name='etc' value='etcnothing' label="etcnothing" id='etcnothing' />  다른건 입지 않을래요!<br>
     <br>
 
     <input type='button' name="submit" id="submitbutton" value = "다 입었어요!"> 
