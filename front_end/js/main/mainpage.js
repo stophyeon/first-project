@@ -200,6 +200,32 @@ document.getElementsByName('day').forEach(function (element) {
   });
   }); //오전오후저녁변수
 
+  //일단 온도 const값으로 박음
+const morningTemperature = 15;  // 오전 
+const afternoonTemperature = 20;  // 오후 
+const nightTemperature = 10;  // 저녁 
+
+// 버튼 클릭하면 뿌슝빠슝
+const morningButton = document.getElementById("morning");
+const afternoonButton = document.getElementById("afternoon");
+const nightButton = document.getElementById("night");
+
+// 온도 표시
+const temperatureDisplay = document.getElementById("temperature");
+
+// 버튼 클릭하면 아침, 점심, 저녁 온도 나오게 하기
+morningButton.addEventListener("click", () => {
+  temperatureDisplay.textContent = `${morningTemperature}도`;
+});
+
+afternoonButton.addEventListener("click", () => {
+  temperatureDisplay.textContent = `${afternoonTemperature}도`;
+});
+
+nightButton.addEventListener("click", () => {
+  temperatureDisplay.textContent = `${nightTemperature}도`;
+}); 
+
 // 옷 입은거 화면에 띄우기 / 완료 
 // 온도에 따른 옷 변경 / 완료
 // 캐릭터 나오기 -> 지금 사진이 깨지는 문제 발생
@@ -208,3 +234,4 @@ document.getElementsByName('day').forEach(function (element) {
  
 // 문제점 - > 점심 처럼 20도일때, 더우니까 옷을 가볍게 입으면, 추워함 . 옷을 엄청껴입으면 , 더워함
 // 해결  
+// 성규꺼 사라짐
