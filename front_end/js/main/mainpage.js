@@ -157,17 +157,15 @@ function changeweatherpoint() {
 }
  // 오전 오후 저녁에 따라 최고 최저기온 재설정
 
-var hotimg = document.createElement("img");
-hotimg.src = "./hotimg.jpg"; // 상대경로 설정
-hotimg.style.width = "300px"; // 이미지 크기 설정
-hotimg.style.height = "300px";
+var hotimg = document.createElement('img');
+hotimg.src = '../../html/main/hotimg.jpg'; // 이미지 파일 경로
 document.getElementById("character").appendChild(hotimg);
 
 function yourlook(yourpoint) {
 
 if (yourpoint + averageweatherpoint > 17) {
   console.log("더워");
-  //document.getElementById("character").appendChild(hotimg); //현재 오류 
+  document.getElementById("character").appendChild(hotimg); //현재 오류 
 } else if (yourpoint + averageweatherpoint < 7) {
   console.log('추워');
 } else if (yourpoint + averageweatherpoint >= 7 && yourpoint + averageweatherpoint <= 17) {
