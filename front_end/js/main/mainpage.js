@@ -158,7 +158,7 @@ function changeweatherpoint() {
  // 오전 오후 저녁에 따라 최고 최저기온 재설정
 
 var hotimg = document.createElement("img");
-hotimg.src = "hotimg.jpg"; // 상대경로 설정
+hotimg.src = "./hotimg.jpg"; // 상대경로 설정
 hotimg.style.width = "300px"; // 이미지 크기 설정
 hotimg.style.height = "300px";
 document.getElementById("character").appendChild(hotimg);
