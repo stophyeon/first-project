@@ -177,74 +177,61 @@
 <script src = "../../js/main/mainpage.js">
 
 </script>
-  </body>
-</html>
 
-<!-- 사이드바 -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>toggle menu</title>
-        <script type="text/javascript">
-            function togglemenu(){
-                document.getElementById('sidebar').classList.toggle('active');
+  <!-- 사이드바 -->
+  <title>toggle menu</title>
+  <script type="text/javascript">
+      function togglemenu(){
+          document.getElementById('sidebar').classList.toggle('active');
 
-            }
-        </script>
-    </head>
-    <body>
-        <div id="sidebar" onclick="togglemenu()">
-            <div class="toggle-btn">
-            </div>
-            <ul>
-                <li>상세 정보</li>
-                <li>시간대별</li>
-            </ul>
-        </div>
-        <style>
-            *{
+      }
+  </script>
+    <div id="sidebar" onclick="togglemenu()">
+      <div class="toggle-btn">
+      </div>
+        <ul>
+        <li>상세 정보</li>
+        <li>시간대별</li>
+        </ul>
+    </div>
+    <style>
+    *{
     margin:0;
     padding: 0;
-}
-#sidebar{
-    position:absolute;
-    width: 30%;
-    height:100%;
-    left: -30%;
-    background-color: rgb(0, 0, 0);
-}
-
-#sidebar li{
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    padding: 25px;
-    border-bottom: 1px solid rgb(123, 123, 123);
-    
-}
-
-.toggle-btn{
-    width: 0px;
-    height: 0px;
-    border-left: 50px solid #7a7a7a;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    position: absolute;
-    left: 105%;
-    top: 200px
-}
-
-.toggle-btn span{
-    display: block;
-    background-color: black;
-    width: 30px;
-    height: 5px;
-    margin: 3px;
-    cursor: pointer;
-}
-
-#sidebar.active{
-    left:0
-}
-        </style>
-    </body>
+  }
+  #sidebar{
+      position:absolute;
+      width: 30%;
+      height:100%;
+      left: -30%;
+      background-color: rgb(0, 0, 0);
+  }
+  #sidebar li{
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      padding: 25px;
+      border-bottom: 1px solid rgb(123, 123, 123);
+  }
+  .toggle-btn{
+      width: 0px;
+      height: 0px;
+      border-left: 50px solid #7a7a7a;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      position: absolute;
+      left: 105%;
+      top: 200px
+  }
+  .toggle-btn span{
+      display: block;
+      background-color: black;
+      width: 30px;
+      height: 5px;
+      margin: 3px;
+      cursor: pointer;
+  }
+  #sidebar.active{
+      left:0
+  }
+    </style>
 </html>
