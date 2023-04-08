@@ -123,3 +123,77 @@ input[id="menuicon"]:checked + label + div {right:0;}
     margin-left: 50px;
   }
   
+  #sidebar1{
+    position:absolute;
+    width: 30%;
+    height: 100%;
+    left: -30%;
+    background-color: black;
+}
+#sidebar1 li{
+    color: white;
+    font-size: 20px;
+    padding: 25px;
+    border-bottom: 1px solid gray;
+}
+.toggle-btn{
+    width: 0px;
+    height: 0px;
+    border-left: 50px solid grey;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    position: absolute;
+    left: 105%;
+    top: 200px
+}
+.toggle-btn span{
+    display: block;
+    background-color: black;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+#sidebar1.active{
+    left: 0
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+#sidebar1{
+  position:absolute;
+  width: 30%;
+  height: 100%;
+  left: -30%;
+  background-color: black;
+}
+#sidebar1 li{
+  color: white;
+  font-size: 20px;
+  padding: 25px;
+  border-bottom: 1px solid gray;
+}
+.toggle-btn{
+  width: 0px;
+  height: 0px;
+  border-left: 50px solid grey;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  position: absolute;
+  left: 105%;
+  top: 200px
+}
+.toggle-btn span{
+  display: block;
+  background-color: black;
+  width: 30px;
+  height: 5px;
+  margin: 3px;
+  cursor: pointer;
+}
+#sidebar1.active{
+  left: 0
+}
