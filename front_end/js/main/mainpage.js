@@ -48,7 +48,12 @@ clothesroompageopen.addEventListener("click", function() {
 });
 //옷장 누르면 밑에 옷장 나오게 하는 법 
 
-
+  // 로그인 여부 체크하는 js 추가해야함. 나중에 사용자 정보 받아와서 해야할듯?
+//function showAlert() {
+ // if (confirm("로그인 후 사용하시오. 로그인 페이지로 이동하시겠습니까?")) {
+  //  window.location.href = "../login/login.html";
+  //}
+//}
 
 //아래부터는 옷장 부 
 let outerpoint, toppoint, bottompoint, etcpoint, dayweather;
@@ -157,20 +162,28 @@ function changeweatherpoint() {
 }
  // 오전 오후 저녁에 따라 최고 최저기온 재설정
 
-var hotimg = document.createElement('img');
-hotimg.src = '../../html/main/hotimg.jpg'; // 이미지 파일 경로
-document.getElementById("character").appendChild(hotimg);
+ 
+ var hotimg = document.createElement('img');
+ hotimg.src = '../main/hotimg.jpg';
+ var coldimg = document.createElement('img')
+ coldimg.src = '../main/coldimg.jpg'
+ var goodimg = document.createElement('img')
+ goodimg.src = '../main/goodimg.jpg'
+ 
+ var character = document.getElementById("character");
+ 
+ function yourlook(yourpoint) {
+   if (yourpoint + averageweatherpoint > 17) {
+     console.log("더워");
+     character.replaceChild(hotimg, character.firstElementChild);
+   } else if (yourpoint + averageweatherpoint < 7) {
+     console.log('추워');
+     character.replaceChild(coldimg, character.firstElementChild);
+   } else if (yourpoint + averageweatherpoint >= 7 && yourpoint + averageweatherpoint <= 17) {
+     console.log('굳');
+     character.replaceChild(goodimg, character.firstElementChild);
+   }
 
-function yourlook(yourpoint) {
-
-if (yourpoint + averageweatherpoint > 17) {
-  console.log("더워");
-  document.getElementById("character").appendChild(hotimg); //현재 오류 
-} else if (yourpoint + averageweatherpoint < 7) {
-  console.log('추워');
-} else if (yourpoint + averageweatherpoint >= 7 && yourpoint + averageweatherpoint <= 17) {
-  console.log('굳');
-}   
 
 }; //실제 활동시는 그림 구현
 
@@ -186,7 +199,9 @@ console.log(yourpoint);
 
 }); //버튼 클릭시 보이는 모습 설정 
 
-
+function togglemenu() {
+  document.getElementById('sidebar1').classList.toggle('active');
+}
 
 
 document.getElementsByName('day').forEach(function (element) {

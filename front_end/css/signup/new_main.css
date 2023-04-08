@@ -35,6 +35,7 @@ body {
 
 
 
+
 /* 입력폼 */
 
 input:focus {
@@ -146,6 +147,9 @@ select {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+
+  
+
 /* 에러메세지 */
 
 .error_next_box {
@@ -181,6 +185,8 @@ select {
     font-weight: 400;
     font-family: Georgia, "Times New Roman", serif;
 }
+
+
 
 footer {
     color: #333; text-align: center; font-size: 0.85rem; margin-top: 30px;}
