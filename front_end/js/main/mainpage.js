@@ -203,7 +203,6 @@ function togglemenu() {
   document.getElementById('sidebar1').classList.toggle('active');
 }
 
-
 document.getElementsByName('day').forEach(function (element) {
   element.addEventListener('click', function (event) {
   dayweather = event.target.value;
