@@ -56,7 +56,7 @@ clothesroompageopen.addEventListener("click", function() {
 //}
 
 //아래부터는 옷장 부 
-let outerpoint, toppoint, bottompoint, etcpoint, dayweather;
+let outerpoint, toppoint, bottompoint, etcpoint, personpoint;
 
 document.getElementsByName('outer').forEach(function (element) {
 element.addEventListener('click', function (event) {
@@ -85,7 +85,13 @@ document.getElementsByName('etc').forEach(function (element) {
   document.getElementById('youretc').value = etcpoint;
   });
   }); //상,하,아우터 별 옷 맞추기 
-//여기까지 값 넣고 뭐 입었는지 뜨기 
+
+  document.getElementsByName('person').forEach(function (element) {
+    element.addEventListener('click', function (event) {
+    personpoint = event.target.value;
+    });
+    }); 
+//개인차 받아오기 
 
 
 
@@ -131,12 +137,13 @@ function checkyourpoint(a) {
 
   // 기타 악세사리 종류에 따른 점수 추가
 
-  /*if (dayweather == 'iamcold') {
-    result = result + 3;
-  } else if (dayweather == 'iamhot') {
-    result = result - 3;
+  if (personpoint == 'hotman') {
+    result = result + 4;
+  } else if (personpoint == 'coldman') {
+    result = result - 4 ;
+  } else if (personpoint == 'normalman') {
+    result = result ;
   }
-  */
 
   // 날씨에 따른 점수 추가
 
@@ -154,11 +161,11 @@ function changeweatherpoint() {
     hottestweatherpoint = 6;  
     coolestweatherpoint = -5;
   } else if(dayweather == 'afternoon') {
-    hottestweatherpoint = 15;  
-    coolestweatherpoint = 12;
+    hottestweatherpoint = 14;  
+    coolestweatherpoint = 10;
   } else if(dayweather == 'evening') {
-    hottestweatherpoint = -5;  
-    coolestweatherpoint = -15;
+    hottestweatherpoint = 1;  
+    coolestweatherpoint = -7;
   }
   averageweatherpoint = (hottestweatherpoint + coolestweatherpoint)/ 2;
 }
@@ -175,13 +182,13 @@ function changeweatherpoint() {
  var character = document.getElementById("character");
  
  function yourlook(yourpoint) {
-   if (yourpoint + averageweatherpoint > 17) {
+   if (yourpoint + averageweatherpoint >= 16) {
      console.log("더워");
      character.replaceChild(hotimg, character.firstElementChild);
-   } else if (yourpoint + averageweatherpoint < 7) {
+   } else if (yourpoint + averageweatherpoint <= 9) {
      console.log('추워');
      character.replaceChild(coldimg, character.firstElementChild);
-   } else if (yourpoint + averageweatherpoint >= 7 && yourpoint + averageweatherpoint <= 17) {
+   } else if (yourpoint + averageweatherpoint > 9 && yourpoint + averageweatherpoint < 16) {
      console.log('굳');
      character.replaceChild(goodimg, character.firstElementChild);
    }
@@ -211,6 +218,8 @@ document.getElementsByName('day').forEach(function (element) {
   console.log(dayweather);
   changeweatherpoint();
   console.log(averageweatherpoint);
+  console.log(personpoint) ;
+  console.log(yourpoint);
   });
   }); //오전오후저녁변수
 
