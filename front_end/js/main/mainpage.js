@@ -94,6 +94,8 @@ document.getElementsByName('etc').forEach(function (element) {
 
 
 
+
+
 function checkyourpoint(a) {
   let result = a;
 
@@ -162,14 +164,14 @@ function changeweatherpoint() {
 }
  // 오전 오후 저녁에 따라 최고 최저기온 재설정
 
- 
- var hotimg = document.createElement('img');
+  
+ let hotimg = document.createElement('img');
  hotimg.src = '../main/hotimg.jpg';
- var coldimg = document.createElement('img')
+ let coldimg = document.createElement('img')
  coldimg.src = '../main/coldimg.jpg'
- var goodimg = document.createElement('img')
+ let goodimg = document.createElement('img')
  goodimg.src = '../main/goodimg.jpg'
- 
+
  var character = document.getElementById("character");
  
  function yourlook(yourpoint) {
@@ -241,3 +243,12 @@ nightButton.addEventListener("click", () => {
 // 옷 입은거 화면에 띄우기 / 완료 
 // 온도에 따른 옷 변경 / 완료
 // 캐릭터 나오기 -> 지금 사진이 깨지는 문제 발생
+// 본인 온도 부 추가 해야됨 . 
+
+ 
+// 문제점 - > 점심 처럼 20도일때, 더우니까 옷을 가볍게 입으면, 추워함 . 옷을 엄청껴입으면 , 더워함
+// 해결  
+// 성규꺼 사라짐
+
+// 깃 설정 어디갔냐 
+// again test
