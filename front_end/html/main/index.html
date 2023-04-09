@@ -128,20 +128,28 @@
         <label for="shortpants"><i class="fa-solid fa-person-half-dress"></i></label>
         <br>
 
-      기타 용품<br>
-      <input type='radio' name='etc' value='muffler' id='muffler' /> 목도리
-      <i class="fa-solid fa-snowflake"></i>
-      <input type='radio' name='etc' value='beanie' id='beanie' /> 모자
-      <i class="fa-solid fa-hat-cowboy-side"></i>
-
-      <input type='radio' name='etc' value='etcnothing' label="etcnothing" id='etcnothing' /> 다른건 입지 않을래요!<br>
-      <br>
-
-      <input type='button' name="submit" id="submitbutton" value="다 입었어요!">
-      <div id='result'></div>
+        <span>기타용품</span><br>
+        <input type='radio' name='etc' value='목도리' id='muffler' /> 목도리
+        <label for="muffler"><i class="fa-solid fa-snowflake"></i></label>
+        <input type='radio' name='etc' value='모자' id='beanie' /> 모자
+        <label for="beanie"><i class="fa-solid fa-hat-cowboy-side"></i></label>
+  
+        <input type='radio' name='etc' value='선택안함' id='etcnothing'/>선택 안함
+        <label for="etcnothing"><i class="fa-solid fa-x"></i></label><br>
+        
+        <span>개인차</span><br>
+        <input type='radio' name='person' value='hotman' id='hotman' /> 더위 많음
+        <label for="hotman"><i class="fa-solid fa-fire"></i></label>
+        <input type='radio' name='person' value='normalman' id='normalman' /> 평범
+        <label for="normalman"><i class="fa-solid fa-thumbs-up"></i></label>
+        <input type='radio' name='person' value='coldman' id='coldman' /> 추위 많음 
+        <label for="coldman"><i class="fa-solid fa-snowflake"></i></label>
+        </div>
+        <input type='button' name="submit" id="submitbutton" value="다 입었어요!">
+        <div id='result'></div>
+      </div>
+  
     </div>
-
-  </div>
 
   <!---사이드바 생성 부-->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
