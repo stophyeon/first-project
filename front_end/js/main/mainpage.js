@@ -250,3 +250,5 @@ nightButton.addEventListener("click", () => {
 // 해결  
 // 성규꺼 사라짐
 
+// 깃 설정 어디갔냐
+// again test
