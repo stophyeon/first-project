@@ -7,9 +7,9 @@ import jakarta.persistence.Id;
 
 public class User {
     @Id
-    private Integer id;
+    private Integer id; //
     private String email;
     private String password;
-
+//이름 이메일 전화번호 성별 생년월일
 
 }
