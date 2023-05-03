@@ -58,7 +58,7 @@
 
       <div class="weather-buttons">
        
-        <form action = "" > <!---오전 오후 저녁-->
+        <form action = "" , id="day"> <!---오전 오후 저녁-->
           <input type="radio" name="day" value="morning" id="morning">오전
           <label for="morning"> </label>
         
@@ -74,12 +74,13 @@
 
       <!-- 가운데 오전 오후 저녁 추가부  -->
     </div>
+    
+    <form action = "", id="cloth"> 
     <div class="yourclothes">
-      <form action = "" > 
-        <input type="text" name="yourouter" id="yourouter" readonly>
-        <input type="text" name="yourtop" id="yourtop" readonly>
-        <input type="text" name="yourbottom" id="yourbottom" readonly>
-        <input type="text" name="youretc" id="youretc" readonly>
+        <input type="text" name="cloth" id="yourouter" readonly>
+        <input type="text" name="cloth" id="yourtop" readonly>
+        <input type="text" name="cloth" id="yourbottom" readonly>
+        <input type="text" name="cloth" id="youretc" readonly>
       </form>
       <!-- 실제 본인 설정한 옷 부 -->
     </div>
@@ -100,12 +101,13 @@
 
   <div class="clothesroompage" id="clothesroompage"> <!---이 부 부터는 기존 clothesroompage, 즉. 옷을 입히는 부 구현-->
 
-    <button type="button" class="clothesroompageopen" id="clothesroompageopen" onclick="showAlert()"><img src="clothsbuttonimg.png"></button>
+    <button type="button" class="clothesroompageopen" id="clothesroompageopen" onclick=""><img src="clothsbuttonimg.png"></button>
     <div class="clothesroom-button" , id="clothesroom-button">
 
       <!---실제 옷장 .-->
+      <form action = "" id="clothes">
       <div class="clothes">
-        <form action = "" > <!---옷장부 총 입력 (모든 아우터 패딩 반팔 바지 한 form에 묶기!)-->
+        <!---옷장부 총 입력 (모든 아우터 패딩 반팔 바지 한 form에 묶기!)-->
           <span>아우터</span>
           <br>
             <input type='radio' name='outer' value='pedding' id='pedding' /> 패딩
@@ -183,7 +185,7 @@
   
 <!--토글 메뉴 css및 JS정리-->
   <title>toggle menu</title>
-  <form action = "">
+  <form action = "", id="sidebar1">
 
   <div id="sidebar1" onclick="togglemenu()">
     <ul>

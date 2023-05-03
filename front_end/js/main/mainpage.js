@@ -56,7 +56,7 @@ clothesroompageopen.addEventListener("click", function() {
 //}
 
 //아래부터는 옷장 부 
-let outerpoint, toppoint, bottompoint, etcpoint, personpoint;
+let outerpoint, toppoint, bottompoint, etcpoint, personpoint, yourpoint;
 
 document.getElementsByName('outer').forEach(function (element) {
 element.addEventListener('click', function (event) {
@@ -198,7 +198,7 @@ function changeweatherpoint() {
 
 
 document.getElementById('submitbutton').addEventListener('click', function(event) {
-var yourpoint = 0; // 추운지 더운지에 따라서 내 포인트 변경 
+let yourpoint = 0; // 추운지 더운지에 따라서 내 포인트 변경 
 changeweatherpoint() ;
 yourpoint = checkyourpoint(yourpoint);
 yourlook(yourpoint);
@@ -207,6 +207,7 @@ console.log(yourpoint + averageweatherpoint ) ;
 console.log(yourpoint);
 
 }); //버튼 클릭시 보이는 모습 설정 
+
 
 function togglemenu() {
   document.getElementById('sidebar1').classList.toggle('active');
@@ -222,32 +223,6 @@ document.getElementsByName('day').forEach(function (element) {
   console.log(yourpoint);
   });
   }); //오전오후저녁변수
-
-  //일단 온도 const값으로 박음
-const morningTemperature = 15;  // 오전 
-const afternoonTemperature = 20;  // 오후 
-const nightTemperature = 10;  // 저녁 
-
-// 버튼 클릭하면 뿌슝빠슝
-const morningButton = document.getElementById("morning");
-const afternoonButton = document.getElementById("afternoon");
-const nightButton = document.getElementById("night");
-
-// 온도 표시
-const temperatureDisplay = document.getElementById("temperature");
-
-// 버튼 클릭하면 아침, 점심, 저녁 온도 나오게 하기
-morningButton.addEventListener("click", () => {
-  temperatureDisplay.textContent = `${morningTemperature}도`;
-});
-
-afternoonButton.addEventListener("click", () => {
-  temperatureDisplay.textContent = `${afternoonTemperature}도`;
-});
-
-nightButton.addEventListener("click", () => {
-  temperatureDisplay.textContent = `${nightTemperature}도`;
-}); 
 
 // 옷 입은거 화면에 띄우기 / 완료 
 // 온도에 따른 옷 변경 / 완료
