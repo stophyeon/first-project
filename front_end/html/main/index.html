@@ -58,24 +58,30 @@
 
       <div class="weather-buttons">
        
+        <form action = "" > <!---오전 오후 저녁-->
           <input type="radio" name="day" value="morning" id="morning">오전
-          <label for="morning"></label>
+          <label for="morning"> </label>
         
           <input type="radio" name="day" value="afternoon" id="afternoon">오후
-          <label for="afternoon"></label>
+          <label for="afternoon"> </label>
         
           <input type="radio" name="day" value="evening" id="evening">저녁
           <label for="evening"></label>
+        </form>  
+          
       </div>
 
 
       <!-- 가운데 오전 오후 저녁 추가부  -->
     </div>
     <div class="yourclothes">
-      <input type="text" name="yourouter" id="yourouter" readonly>
-      <input type="text" name="yourtop" id="yourtop" readonly>
-      <input type="text" name="yourbottom" id="yourbottom" readonly>
-      <input type="text" name="youretc" id="youretc" readonly>
+      <form action = "" > 
+        <input type="text" name="yourouter" id="yourouter" readonly>
+        <input type="text" name="yourtop" id="yourtop" readonly>
+        <input type="text" name="yourbottom" id="yourbottom" readonly>
+        <input type="text" name="youretc" id="youretc" readonly>
+      </form>
+      <!-- 실제 본인 설정한 옷 부 -->
     </div>
 
 
@@ -99,53 +105,58 @@
 
       <!---실제 옷장 .-->
       <div class="clothes">
-        <span>아우터</span>
-        <br>
-          <input type='radio' name='outer' value='pedding' id='pedding' /> 패딩
-          <label for="pedding"><i class="fa-solid fa-snowman"></i></label>
-          <input type='radio' name='outer' value='coat' id='coat' /> 코트
-          <label for="coat"><i class="fa-solid fa-leaf"></i></label>
-          <input type='radio' name='outer' value='cardigan' id='cardigan' /> 가디건
-          <label for="cardigan"><i class="fa-solid fa-mug-saucer"></i></label>
+        <form action = "" > <!---옷장부 총 입력 (모든 아우터 패딩 반팔 바지 한 form에 묶기!)-->
+          <span>아우터</span>
+          <br>
+            <input type='radio' name='outer' value='pedding' id='pedding' /> 패딩
+            <label for="pedding"><i class="fa-solid fa-snowman"></i></label>
+            <input type='radio' name='outer' value='coat' id='coat' /> 코트
+            <label for="coat"><i class="fa-solid fa-leaf"></i></label>
+            <input type='radio' name='outer' value='cardigan' id='cardigan' /> 가디건
+            <label for="cardigan"><i class="fa-solid fa-mug-saucer"></i></label>
   
-          <input type='radio' name='outer' value='nothing' id='nothing' /> 선택안함
-          <label for="nothing"><i class="fa-solid fa-x"></i></label><br>
+            <input type='radio' name='outer' value='nothing' id='nothing' /> 선택안함
+            <label for="nothing"><i class="fa-solid fa-x"></i></label><br>
 
-        <span>상의</span><br>
-        <input type='radio' name='top' value='sweatshirt' id='sweatshirt' /> 맨투맨
-        <label for="sweatshirt"><i class="fa-solid fa-mars-double"></i></label>
-        <input type='radio' name='top' value='tshirt' id='tshirt' /> 티셔츠
-        <label for="tshirt"><i class="fa-solid fa-shirt"></i></label>
-        <input type='radio' name='top' value='shirts' id='shirts' /> 셔츠 /원피스
-        <label for="shirts"><i class="fa-solid fa-person-dress"></i></label>
+          <span>상의</span>
+          <br>
+            <input type='radio' name='top' value='sweatshirt' id='sweatshirt' /> 맨투맨
+            <label for="sweatshirt"><i class="fa-solid fa-mars-double"></i></label>
+            <input type='radio' name='top' value='tshirt' id='tshirt' /> 티셔츠
+            <label for="tshirt"><i class="fa-solid fa-shirt"></i></label>
+            <input type='radio' name='top' value='shirts' id='shirts' /> 셔츠 /원피스
+            <label for="shirts"><i class="fa-solid fa-person-dress"></i></label>
       
         
-        <span>하의</span><br>
-        <input type='radio' name='bottom' value='pants' id='pants' /> 긴바지
-        <label for="pants"><i class="fa-solid fa-person"></i></label>
-        <input type='radio' name='bottom' value='shortpants' id='shortpants' /> 반바지
-        <label for="shortpants"><i class="fa-solid fa-person-half-dress"></i></label>
-        <br>
+          <span>하의</span>
+          <br>
+            <input type='radio' name='bottom' value='pants' id='pants' /> 긴바지
+            <label for="pants"><i class="fa-solid fa-person"></i></label>
+            <input type='radio' name='bottom' value='shortpants' id='shortpants' /> 반바지
+            <label for="shortpants"><i class="fa-solid fa-person-half-dress"></i></label>
+          <br>
 
-        <span>기타용품</span><br>
-        <input type='radio' name='etc' value='muffler' id='muffler' /> 목도리
-        <label for="muffler"><i class="fa-solid fa-snowflake"></i></label>
-        <input type='radio' name='etc' value='beanie' id='beanie' /> 모자
-        <label for="beanie"><i class="fa-solid fa-hat-cowboy-side"></i></label>
+        <span>기타용품</span>
+          <br>
+            <input type='radio' name='etc' value='muffler' id='muffler' /> 목도리
+            <label for="muffler"><i class="fa-solid fa-snowflake"></i></label>
+            <input type='radio' name='etc' value='beanie' id='beanie' /> 모자
+            <label for="beanie"><i class="fa-solid fa-hat-cowboy-side"></i></label>
   
-        <input type='radio' name='etc' value='etcnothing' id='etcnothing'/>선택 안함
-        <label for="etcnothing"><i class="fa-solid fa-x"></i></label><br>
+            <input type='radio' name='etc' value='etcnothing' id='etcnothing'/>선택 안함
+            <label for="etcnothing"><i class="fa-solid fa-x"></i></label><br>
         
         <span>개인차</span><br>
-        <input type='radio' name='person' value='hotman' id='hotman' /> 더위 많음
-        <label for="hotman"><i class="fa-solid fa-fire"></i></label>
-        <input type='radio' name='person' value='normalman' id='normalman' /> 평범
-        <label for="normalman"><i class="fa-solid fa-thumbs-up"></i></label>
-        <input type='radio' name='person' value='coldman' id='coldman' /> 추위 많음 
-        <label for="coldman"><i class="fa-solid fa-snowflake"></i></label>
-        </div>
-        <input type='button' name="submit" id="submitbutton" value="다 입었어요!">
-        <div id='result'></div>
+            <input type='radio' name='person' value='hotman' id='hotman' /> 더위 많음
+            <label for="hotman"><i class="fa-solid fa-fire"></i></label>
+            <input type='radio' name='person' value='normalman' id='normalman' /> 평범
+            <label for="normalman"><i class="fa-solid fa-thumbs-up"></i></label>
+            <input type='radio' name='person' value='coldman' id='coldman' /> 추위 많음 
+            <label for="coldman"><i class="fa-solid fa-snowflake"></i></label>
+          </div>
+            <input type='button' name="submit" id="submitbutton" value="다 입었어요!">
+            <div id='result'></div>
+        </form>
       </div>
   
     </div>
@@ -172,6 +183,8 @@
   
 <!--토글 메뉴 css및 JS정리-->
   <title>toggle menu</title>
+  <form action = "">
+
   <div id="sidebar1" onclick="togglemenu()">
     <ul>
       <li>상세 정보</li>
@@ -185,6 +198,6 @@
   <script src="../../js/main/mainpage.js">
 
   </script>
-
+  </form>
 </body>
 </html>
