@@ -1,4 +1,4 @@
-package com.example.firstSpring.DTO.
+package com.example.firstSpring.DTO;
 import lombok.*;
 
 import java.util.Date;
