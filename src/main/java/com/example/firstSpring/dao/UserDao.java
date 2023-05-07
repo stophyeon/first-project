@@ -1,8 +1,10 @@
-package com.weatheria.member.dao;
+package com.example.firstSpring.dao;
 
 import com.example.firstSpring.DTO.UserDto;
+import com.example.firstSpring.entity.User;
 
 
 public interface UserDao {
-    public String loginCheck(UserDto dto);
+    public User loginCheck(String username);
+
 }
