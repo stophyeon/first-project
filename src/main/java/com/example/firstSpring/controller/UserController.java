@@ -17,11 +17,11 @@ public class UserController {
     @Autowired
     private UserService userService;
     private UserRepository userRepository;
-    //private UserDto dto;
 
-    @PostMapping(value = "/login")
-    public String login(@RequestParam("username") String username,@RequestParam("password") String password, HttpSession session){
-        UserDto dto=new UserDto(username,password); //생성자를 통해 dto에 username과 password를 전달
+
+    @PostMapping(value = "/login")//url이 같으므로 login에서 보낸 username과 password가 자동생성
+    public String login(UserDto dto, HttpSession session){
+
         boolean loginService= userService.login(dto); //serService.login 에서 return한 true or flase를 받음
         if (loginService) { //가져온 password가 입력받은 password와 일치하면
             session.setAttribute("login", dto.getUsername()); //login session에 저장 입력받은 username으로(id)
@@ -29,10 +29,5 @@ public class UserController {
         } else {
             return "redirect:/login";
         }
-
     }
-
-
-
-
 }

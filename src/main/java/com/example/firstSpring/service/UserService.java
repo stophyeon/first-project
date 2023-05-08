@@ -1,8 +1,10 @@
 package com.example.firstSpring.service;
 
 import com.example.firstSpring.DTO.UserDto;
+import com.example.firstSpring.dao.UserDaoImpl;
 import com.example.firstSpring.entity.User;
 import com.example.firstSpring.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.example.firstSpring.dao.UserDao;
 @Service
