@@ -1,15 +1,12 @@
-package com.example.firstSpring.dao;
+package com.example.firstSpring.DAO;
 
-import com.example.firstSpring.DTO.UserDto;
+import com.example.firstSpring.DTO.UserDTO;
 import com.example.firstSpring.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 
 import java.sql.*;
-import java.sql.SQLException;
 
-@Repository
-public class UserDao {
+public class UserDAOImpl implements UserDAO{
     private final String url = "jdbc:mysql://127.0.0.1:3306/first-project";
     private final String user = "root";
     private final String password = "1234";
@@ -17,6 +14,7 @@ public class UserDao {
     private PreparedStatement pstmt;
     private ResultSet rs;
     private Statement stmt;
+
     @Autowired
     public void UserDaoImpl() {
         try {
@@ -31,17 +29,16 @@ public class UserDao {
     }
 
 
-    public User loginCheck(String username) {
+    public User loginCheck(String userid) {
         User user = new User();
-        String SQL = "SELECT password FROM customer WHERE username = ?";
+        String SQL = "SELECT password FROM customer WHERE userid = ?";
 
 
         try {
             pstmt = conn.prepareStatement(SQL);
-            pstmt.setString(1,username);
+            pstmt.setString(1,userid);
             rs = pstmt.executeQuery();
-            user.setUsername(rs.getString("username"));
-            user.setPassword(rs.getString("password"));
+            user.UserUpdate(rs.getString(1),rs.getString(2),rs.getString(3));
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -50,7 +47,7 @@ public class UserDao {
     }
 
 
-    public boolean singnup(UserDto user) {
+    public boolean insertUser(UserDTO dto) {
         boolean result = false;
         String sql = "INSERT INTO TBL_USER values(?, ?, ?, ?, ?)";
         int count = 0;
@@ -60,12 +57,11 @@ public class UserDao {
             pstmt = conn.prepareStatement(sql);
 
 
-            pstmt.setString(1, user.getUsername());
-            pstmt.setString(2, user.getPassword());
-            pstmt.setString(3, user.getEmail());
-            pstmt.setString(4, user.getName());
-            pstmt.setString(5, user.getPhoneNum());
-
+            pstmt.setString(1, dto.getUserid());
+            pstmt.setString(2, dto.getPassword());
+            pstmt.setString(3, dto.getEmail());
+            pstmt.setString(4, dto.getName());
+            pstmt.setString(5, dto.getPhoneNum());
 
             count = pstmt.executeUpdate();
             pstmt.close();
