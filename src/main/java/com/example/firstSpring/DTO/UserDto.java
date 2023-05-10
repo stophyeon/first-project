@@ -1,26 +1,32 @@
 package com.example.firstSpring.DTO;
+import com.example.firstSpring.entity.User;
 import lombok.*;
 
-import java.util.Date;
-@AllArgsConstructor
 @Data
-@Getter
-@Setter
+@NoArgsConstructor
 public class UserDto {
 
-    private  String username;//단순히 입력받은 아이디를 가져오는 거면 Stirng형태에 username이 낫겠다싶어서 바꿨습니다.
-    //private Long userid;
-    private String password; //passwd -> password로 바꿨어요
+    private String username;
+    private String password;
     private String name;
     private String email;
     private String phoneNum;
-    private Date join_date;
+    private String gender;
+    private String birthYear;
+    private Integer birthMonth;
+    private String birthDay;
 
 
-
+    @Builder
     public UserDto(String username, String password) {
         this.username = username;
         this.password = password;
+
     }
+    public User toEntity(){
+        return User.builder().username(username).password(password)
+                .email(email).phoneNum(phoneNum).name(name).build();
+    }
+
 
 }

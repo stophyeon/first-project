@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lnag="ko">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>WeaTherla : 회원가입</title>
@@ -17,14 +17,14 @@
 <div id= "wrapper">
 
     <div id="content">
-
+    <form action="user/new" method="post">
         <!-- 아이디 생성란(wheatherla 아이디로 ㅇㅇ) -->
         <div>
             <h3 class="join_title">
                 <label for="id">아이디</label>
             </h3>
             <span class="box int_id">
-                        <input type="text" id="id" class="int" maxlength="20">
+                        <input type="text" id="id" class="int" name= "username" maxlength="20">
                         <span class="step_url">@weatherla.com</span>
                     </span>
             <span class="error_next_box"></span>
@@ -34,7 +34,7 @@
         <div>
             <h3 class="join_title"><label for="pswd1">비밀번호</label></h3>
             <span class="box int_pass">
-                        <input type="text" id="pswd1" class="int" maxlength="30">
+                        <input type="text" id="pswd1" class="int" name= "password" maxlength="30">
                         <span id="alertTxt">사용불가</span>
 
                         <img src="images/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
@@ -59,7 +59,7 @@
         <div>
             <h3 class="join_title"><label for="name">이름</label></h3>
             <span class="box int_name">
-                        <input type="text" id="name" class="int" maxlength="20">
+                        <input type="text" id="name" class="int" name= "name" maxlength="20">
                     </span>
             <span class="error_next_box"></span>
         </div>
@@ -72,14 +72,14 @@
                 <!-- 생년 -->
                 <div id="bir_yy">
                             <span class="box">
-                                <input type="text" id="yy" class="int" maxlength="4" placeholder="년(4자)">
+                                <input type="text" id="yy" class="int" name= "birthYear" maxlength="4" placeholder="년(4자)">
                             </span>
                 </div>
 
                 <!-- 생년 월 -->
                 <div id="bir_mm">
                             <span class="box">
-                                <select id="mm" class="sel">
+                                <select id="mm" class="sel" name= "birthMonth">
                                     <option>월</option>
                                     <option value="01">1</option>
                                     <option value="02">2</option>
@@ -101,7 +101,7 @@
                 <!-- 생년월일 -->
                 <div id="bir_dd">
                             <span class="box">
-                                <input type="text" id="dd" class="int" maxlength="2" placeholder="일">
+                                <input type="text" id="dd" class="int" name="birthDay"  maxlength="2" placeholder="일">
                             </span>
                 </div>
 
@@ -113,7 +113,7 @@
         <div>
             <h3 class="join_title"><label for="gender">성별</label></h3>
             <span class="box gender_code">
-                        <select id="gender" class="sel">
+                        <select id="gender" class="sel" name="gender">
                             <option>성별</option>
                             <option value="M">남자</option>
                             <option value="F">여자</option>
@@ -126,7 +126,7 @@
         <div>
             <h3 class="join_title"><label for="email">본인인증 이메일<span class="optional">(필수)</span></label></h3>
             <span class="box int_email">
-                        <input type="text" id="email" class="int" maxlength="100" placeholder="선택입력">
+                        <input type="text" id="email" class="int" name= "email" maxlength="100" placeholder="선택입력">
                     </span>
             <span class="error_next_box">이메일 주소를 다시 한번 확인해주시길 바랍니다.</span>
         </div>
@@ -135,7 +135,7 @@
         <div>
             <h3 class="join_title"><label for="mobile">전화번호</label></h3>
             <span class="box int_mobile">
-                        <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
+                        <input type="tel" id="mobile" class="int" name= "phoneNum" maxlength="16" placeholder="전화번호 입력">
                     </span>
             <span class="error_next_box"></span>
         </div>
@@ -155,7 +155,7 @@
                 평범해요!
             </label>
         </div>
-
+    </form>
 
 
         <!-- 최종 가입 하기 버튼-->

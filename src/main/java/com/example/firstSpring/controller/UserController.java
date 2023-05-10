@@ -30,5 +30,9 @@ public class UserController {
             return "redirect:/login";
         }
     }
-
+    @PostMapping("user/new")
+    public String signup(@ModelAttribute UserDto user){
+        userService.register(user);
+        return "redirect:/";
+    }
 }
