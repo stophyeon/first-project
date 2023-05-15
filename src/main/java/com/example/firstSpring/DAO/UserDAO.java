@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserDAO {
-    public User loginCheck(String username);
+    //public User loginCheck(String username);
     public boolean insertUser(UserDTO dto);
+    public boolean login(UserDTO userDto);
 }

@@ -28,24 +28,32 @@ public class UserDAOImpl implements UserDAO{
         }
     }
 
-
-    public User loginCheck(String userid) {
-        User user = new User();
-        String SQL = "SELECT password FROM customer WHERE userid = ?";
-
+    public boolean login(UserDTO userDto) {
+        boolean result = false;
 
         try {
-            pstmt = conn.prepareStatement(SQL);
-            pstmt.setString(1,userid);
+
+            // 입력된 아이디와 패스워드를 이용하여 쿼리를 생성
+            String sql = "SELECT COUNT(*) FROM users WHERE user_id = ? AND password = ?";
+            pstmt=conn.prepareStatement(sql);
+            pstmt.setString(1, userDto.getUserid());
+            pstmt.setString(2, userDto.getPassword());
+
+            // 쿼리 실행
             rs = pstmt.executeQuery();
-            user.UserUpdate(rs.getString(1),rs.getString(2),rs.getString(3));
+            rs.next();
+            int count = rs.getInt(1);
 
+            // 검색 결과가 1이면 로그인 성공
+            if (count == 1) {
+                result = true;
+            }
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-        return user;
-    }
 
+        return result;
+    }
 
     public boolean insertUser(UserDTO dto) {
         boolean result = false;
