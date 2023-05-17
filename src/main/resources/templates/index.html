@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>WeaTherIa</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/cover/">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  
+  <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+  <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+  <meta name="theme-color" content="#712cf9">
+
+
+  <!-- Custom styles for this template -->
+  <link href="/css/main/mainpage.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/6d9e9a9e35.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="d-flex h-100 text-center text-bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <h3 class="float-md-start mb-0">WeaTherIa</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"></a>
+        </nav>
+        <input type='date'>
+
+      </div>
+
+    </header>
+    <div class="container">
+  
+
+        <div style="width: 400px; height: 350px; border: 2px solid yellow; background-color :green; 
+    text-align: center; position: absolute; top: 40%; left: 53%; transform: translate(-50%, -50%);" id=character>
+          <!--젤 가운데로 위치설정 했어요 -->
+          <div style="display: inline-block; vertical-align: middle; height: 100%;">
+            <span style="display: inline-block; height: 100%; vertical-align: middle;"></span>
+            <span style="display: inline-block; vertical-align: middle;"></span>
+            
+          </div> <!-- 가운데 네모 버튼 추가부  -->
+          
+        </div>
+
+
+      <div class="weather-buttons">
+       
+        <form action = "" , id="day"> <!---오전 오후 저녁-->
+          <input type="radio" name="day" value="morning" id="morning">오전
+          <label for="morning"> </label>
+        
+          <input type="radio" name="day" value="afternoon" id="afternoon">오후
+          <label for="afternoon"> </label>
+        
+          <input type="radio" name="day" value="evening" id="evening">저녁
+          <label for="evening"></label>
+        </form>  
+          
+      </div>
+
+
+      <!-- 가운데 오전 오후 저녁 추가부  -->
+    </div>
+    
+    <form action = "", id="cloth"> 
+    <div class="yourclothes">
+        <input type="text" name="cloth" id="yourouter" readonly>
+        <input type="text" name="cloth" id="yourtop" readonly>
+        <input type="text" name="cloth" id="yourbottom" readonly>
+        <input type="text" name="cloth" id="youretc" readonly>
+    </div>
+    </form>
+      <!-- 실제 본인 설정한 옷 부 -->
+    </div>
+
+
+
+
+
+
+
+    <footer class="mt-auto text-white-50">
+
+    </footer>
+
+  </div>
+
+
+
+  <div class="clothesroompage" id="clothesroompage"> <!---이 부 부터는 기존 clothesroompage, 즉. 옷을 입히는 부 구현-->
+
+    <button type="button" class="clothesroompageopen" id="clothesroompageopen" onclick=""><img src="/img/clothsbuttonimg.png"></button>
+    <div class="clothesroom-button" , id="clothesroom-button">
+
+      <!---실제 옷장 .-->
+      <form action = "" id="clothes">
+      <div class="clothes">
+        <!---옷장부 총 입력 (모든 아우터 패딩 반팔 바지 한 form에 묶기!)-->
+          <span>아우터</span>
+          <br>
+            <input type='radio' name='outer' value='pedding' id='pedding' /> 패딩
+            <label for="pedding"><i class="fa-solid fa-snowman"></i></label>
+            <input type='radio' name='outer' value='coat' id='coat' /> 코트
+            <label for="coat"><i class="fa-solid fa-leaf"></i></label>
+            <input type='radio' name='outer' value='cardigan' id='cardigan' /> 가디건
+            <label for="cardigan"><i class="fa-solid fa-mug-saucer"></i></label>
+  
+            <input type='radio' name='outer' value='nothing' id='nothing' /> 선택안함
+            <label for="nothing"><i class="fa-solid fa-x"></i></label><br>
+
+          <span>상의</span>
+          <br>
+            <input type='radio' name='top' value='sweatshirt' id='sweatshirt' /> 맨투맨
+            <label for="sweatshirt"><i class="fa-solid fa-mars-double"></i></label>
+            <input type='radio' name='top' value='tshirt' id='tshirt' /> 티셔츠
+            <label for="tshirt"><i class="fa-solid fa-shirt"></i></label>
+            <input type='radio' name='top' value='shirts' id='shirts' /> 셔츠 /원피스
+            <label for="shirts"><i class="fa-solid fa-person-dress"></i></label>
+      
+        
+          <span>하의</span>
+          <br>
+            <input type='radio' name='bottom' value='pants' id='pants' /> 긴바지
+            <label for="pants"><i class="fa-solid fa-person"></i></label>
+            <input type='radio' name='bottom' value='shortpants' id='shortpants' /> 반바지
+            <label for="shortpants"><i class="fa-solid fa-person-half-dress"></i></label>
+          <br>
+
+        <span>기타용품</span>
+          <br>
+            <input type='radio' name='etc' value='muffler' id='muffler' /> 목도리
+            <label for="muffler"><i class="fa-solid fa-snowflake"></i></label>
+            <input type='radio' name='etc' value='beanie' id='beanie' /> 모자
+            <label for="beanie"><i class="fa-solid fa-hat-cowboy-side"></i></label>
+  
+            <input type='radio' name='etc' value='etcnothing' id='etcnothing'/>선택 안함
+            <label for="etcnothing"><i class="fa-solid fa-x"></i></label><br>
+        
+        <span>개인차</span><br>
+            <input type='radio' name='person' value='hotman' id='hotman' /> 더위 많음
+            <label for="hotman"><i class="fa-solid fa-fire"></i></label>
+            <input type='radio' name='person' value='normalman' id='normalman' /> 평범
+            <label for="normalman"><i class="fa-solid fa-thumbs-up"></i></label>
+            <input type='radio' name='person' value='coldman' id='coldman' /> 추위 많음 
+            <label for="coldman"><i class="fa-solid fa-snowflake"></i></label>
+          </div>
+            <input type='button' name="submit" id="submitbutton" value="다 입었어요!">
+            <div id='result'></div>
+        </form>
+      </div>
+  
+    </div>
+
+  <!---사이드바 생성 부-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  </div>
+
+  <input type="checkbox" id="menuicon">
+  <label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="sidebar">
+    <button type="submit" class="join_link" id="log_btn" onclick="location.href='/login'">로그인</button>
+
+  </div>
+
+
+  
+<!--토글 메뉴 css및 JS정리-->
+  <title>toggle menu</title>
+  <form action = "", id="sidebar1">
+
+  <div id="sidebar2" onclick="togglemenu()">
+    <ul>
+      <li>상세 정보</li>
+      <li>시간대별</li>
+    </ul>
+    <div class="toggle-btn">
+
+    </div>
+  </div>
+  
+  <script src="/js/main/mainpage.js">
+
+  </script>
+  </form>
+</body>
+</html>
