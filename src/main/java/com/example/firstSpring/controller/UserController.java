@@ -15,8 +15,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
-    UserService service=new UserServicelmpl();
+    private final UserService service;
 
+    @Autowired
+    public UserController(UserService userService) {
+        this.service = userService;
+    }
+    @GetMapping(value = "login")
+    public String login() {
+        return "login";
+    }
     @PostMapping("/login")
     public String login(@RequestParam("userid")String userid,@RequestParam("password")String password){
 
@@ -24,18 +32,20 @@ public class UserController {
             return "redirect:/home";
         }
         else {
-            ;
-            return "redirect:/login";
-        }    }
 
-    @PostMapping("/signup")
-    public String signup(UserDTO userdto){
+            return "redirect:/login";
+        }
+    }
+
+    @GetMapping("/signup")
+    public String signup(UserDTO userdto) {
         try {
             service.SignUp(userdto);
-            return "redirect:/login";
-        } catch (IllegalArgumentException e) {
-            return "signup";
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
+        return "signup";
     }
 
 }

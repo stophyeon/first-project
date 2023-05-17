@@ -3,19 +3,20 @@ package com.example.firstSpring.DAO;
 import com.example.firstSpring.DTO.UserDTO;
 import com.example.firstSpring.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
-
+@Repository
 public class UserDAOImpl implements UserDAO{
-    private final String url = "jdbc:mysql://127.0.0.1:3306/first-project";
+    private final String url = "jdbc:mysql://127.0.0.1:3306/weatheria";
     private final String user = "root";
-    private final String password = "1234";
+    private final String password = "990531";
     private Connection conn;
     private PreparedStatement pstmt;
     private ResultSet rs;
     private Statement stmt;
 
-    @Autowired
+    @Autowired(required = true)
     public void UserDaoImpl() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -27,7 +28,7 @@ public class UserDAOImpl implements UserDAO{
             e.printStackTrace();
         }
     }
-
+    @Override
     public boolean login(UserDTO userDto) {
         boolean result = false;
 
@@ -54,7 +55,7 @@ public class UserDAOImpl implements UserDAO{
 
         return result;
     }
-
+    @Override
     public boolean insertUser(UserDTO dto) {
         boolean result = false;
         String sql = "INSERT INTO TBL_USER values(?, ?, ?, ?, ?)";
