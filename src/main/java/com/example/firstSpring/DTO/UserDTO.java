@@ -18,7 +18,7 @@ public class UserDTO {
     private String phoneNum;
     private String gender;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate birth;
+    private String birth;
 
 
     public UserDTO(User user){ //entity를 dto로 변환
@@ -32,7 +32,7 @@ public class UserDTO {
 
     }
     @Builder// dto를 entity로 변환
-    public UserDTO(String userid, String password,String name,String email,String phoneNum,String gender,LocalDate birth) {
+    public UserDTO(String userid, String password,String name,String email,String phoneNum,String gender,String birth) {
         this.userid = userid;
         this.password = password;
         this.name=name;

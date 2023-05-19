@@ -12,6 +12,7 @@ import java.util.Date;
 @Getter
 @Builder
 @Entity
+@Table(name = "member")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +26,9 @@ public class User {
     private String email;
     private String phoneNum;
     private String gender;
-    private LocalDate birth;
+    private String birth;
     @Builder
-    public User(String password, String name, String email, String phoneNum, String userid,String gender,LocalDate birth) {
+    public User(String password, String name, String email, String phoneNum, String userid,String gender,String birth) {
         this.userid = userid;
         this.password = password;
         this.name = name;
