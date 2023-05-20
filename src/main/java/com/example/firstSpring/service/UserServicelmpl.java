@@ -21,15 +21,19 @@ public class UserServicelmpl implements UserService {
         return userDAO.save(newuser).getUserid();
     }
 
-    /*@Override
-    public boolean login(String userid, String password){
-
-        UserDTO userdto=new UserDTO();
-        userdto.setUserid(userid); //JPA가없어서 setter로
-        userdto.setPassword(password);
-        boolean result=userDAO.login(userdto); //login에 result값을 return
-        return result;
+    @Override
+    public boolean login(UserDTO userdto) {
+        User userid= userDAO.findByUserid(userdto.getUserid());
+        User password=userDAO.findByPassword(userid);
+        if (password != null && password.equals(userdto.getPassword())) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-*/
+
+
+
+
 }

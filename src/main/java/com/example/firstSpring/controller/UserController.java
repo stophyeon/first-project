@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
+    @Autowired
     private final UserService service;
+
 
     @Autowired
     public UserController(UserService userService) {
@@ -24,26 +26,28 @@ public class UserController {
     }
 
 
+
     @GetMapping("/signup")
     public String signupForm() {
         return "signup";
     }
+
     @PostMapping("/signup")
     public String signup(UserDTO userdto){
         service.insertUser(userdto);
         return "login";
     }
-    /*@PostMapping("/login")
-    public String login(@RequestParam("userid")String userid,@RequestParam("password")String password){
 
-        if (service.login(userid,password)){
+    @PostMapping("/login")
+    public String login(UserDTO userdto){
+
+        if (service.login(userdto)){
             return "redirect:/home";
         }
         else {
-
             return "redirect:/login";
         }
-    }*/
+    }
 }
 
 

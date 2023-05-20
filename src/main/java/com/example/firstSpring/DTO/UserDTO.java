@@ -17,7 +17,7 @@ public class UserDTO {
 
     private String phoneNum;
     private String gender;
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+
     private String birth;
 
 

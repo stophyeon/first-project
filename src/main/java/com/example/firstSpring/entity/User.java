@@ -3,6 +3,7 @@ package com.example.firstSpring.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -43,6 +44,9 @@ public class User {
         this.email = email;
         this.phoneNum = phoneNumber;
     }
+
+
+
 
 }
 
