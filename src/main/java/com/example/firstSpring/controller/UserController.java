@@ -42,10 +42,10 @@ public class UserController {
     public String login(UserDTO userdto){
 
         if (service.login(userdto)){
-            return "redirect:/home";
+            return "/index.html";
         }
         else {
-            return "redirect:/login";
+            return "/login";
         }
     }
 }
