@@ -25,7 +25,10 @@ public class UserController {
         return "login";
     }
 
-
+    @GetMapping(value = "logout")
+    public String logout() {
+        return "index";
+    }
 
     @GetMapping("/signup")
     public String signupForm() {
