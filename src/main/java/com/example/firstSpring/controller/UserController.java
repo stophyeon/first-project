@@ -42,7 +42,7 @@ public class UserController {
     public String login(UserDTO userdto){
 
         if (service.login(userdto)){
-            return "/index";
+            return "/mypage";
         }
         else {
 
