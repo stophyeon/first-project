@@ -3,9 +3,9 @@ import com.example.firstSpring.entity.User;
 import lombok.*;
 import org.intellij.lang.annotations.Pattern;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
-
 @Data
 @NoArgsConstructor
 public class UserDTO {

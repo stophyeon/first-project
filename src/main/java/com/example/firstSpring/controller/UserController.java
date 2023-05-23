@@ -45,7 +45,7 @@ public class UserController {
     public String login(UserDTO userdto){
 
         if (service.login(userdto)){
-            return "/mypage";
+            return "/mypage.html";
         }
         else {
 
