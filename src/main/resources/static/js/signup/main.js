@@ -29,8 +29,10 @@ var error = document.querySelectorAll('.error_next_box');
 
 
 /*addEvent*/
-
-
+/*
+백앤드에서 validate구현함
+ */
+/*
 id.addEventListener("focusout", checkId);
 pw1.addEventListener("focusout", checkPw);
 pw2.addEventListener("focusout", comparePw);
@@ -49,7 +51,7 @@ email.addEventListener("focusout", isEmailCorrect);
 mobile.addEventListener("focusout", checkPhoneNum);
 
 
-
+*/
 
 /*문구들 총 정리*/ 
 

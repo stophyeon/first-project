@@ -1,6 +1,6 @@
 
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-
+<% request.setCharacterEncoding("UTF-8"); %>
 <html lang="en" class="h-100">
 
 <head>
@@ -85,7 +85,9 @@
       <input type="text" name="cloth" id="yourtop" readonly>
       <input type="text" name="cloth" id="yourbottom" readonly>
       <input type="text" name="cloth" id="youretc" readonly>
+    </div>
   </form>
+
   <!-- 실제 본인 설정한 옷 부 -->
   </div>
 
@@ -181,7 +183,7 @@
   <span></span>
 </label>
 <div class="sidebar">
-  <form action="../main/index.html" method="get">
+  <form action="/logout" method="get">
     <button class="join_link" id="logout_btn" type="submit">로그아웃</button>
   </form>
 </div>
@@ -191,7 +193,7 @@
 <title>toggle menu</title>
 <form action = "", id="sidebar1">
 
-  <div id="sidebar1" onclick="togglemenu()">
+  <div id="sidebar2" onclick="togglemenu()">
     <ul>
       <li>상세 정보</li>
       <li>시간대별</li>

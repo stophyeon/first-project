@@ -8,5 +8,7 @@ public interface UserService {
     String insertUser(UserDTO userdto);
     boolean login(UserDTO userDto);
 
+    boolean exitingUserid(String userid); //id중복검사
+
 }
 

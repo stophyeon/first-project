@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
@@ -18,7 +20,8 @@
                 <ul>
                     <li>
                         <span class="id_bg"><!-- 배경이미지(메일아이디)--></span>
-                        <span><input type="text" name="userid" placeholder="아이디(이메일)"></span>
+                        <span><input type="text" name="userid" placeholder="아이디"></span>
+
 
                     </li>
                     <li class="error id_error">아이디(이메일)을 입력해주세요.</li>
@@ -36,8 +39,6 @@
                             <span>자동로그인</span>
                         </label>
                     </p>
-                    <!--아이디(이메일)/비밀번호 찾기-->
-                    <a href="#" class="idpw_search">아이디(이메일)/비밀번호 찾기</a>
                 </div>
                 <!--로그인 버튼-->
                 <button type="submit" id="login_btn">로그인</button>

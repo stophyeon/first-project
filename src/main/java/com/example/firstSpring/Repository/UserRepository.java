@@ -12,10 +12,9 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query("SELECT u FROM User u WHERE u.userid = :userid")
-    User findByUserid(@Param("userid") String userid);
-    /*
-    @Query("SELECT u.password FROM User u WHERE u.userid = :userid")
-    User findPasswordByUserId(@Param("userid") User userId);
-    */
-    }
+    User findByUserid(@Param("userid") String userid); //login시 id를 찾아옴
+
+    boolean existsByUserid(String userid);
+}
+
 

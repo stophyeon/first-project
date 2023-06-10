@@ -29,6 +29,10 @@ public class UserServicelmpl implements UserService {
         else {return false;}
     }
 
+    @Override
+    public boolean exitingUserid(String userid){
+        return userDAO.existsByUserid(userid); //존재하면 true반환
+    }
 
 
 
