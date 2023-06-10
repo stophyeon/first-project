@@ -58,26 +58,14 @@ public class UserController {
             bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
             return "login";
         }
+
         HttpSession session = request.getSession();
-        session.setAttribute("name",userdto.getName());
-        System.out.println();
+        session.setAttribute("id",userdto.getUserid());
+        return"mypage";
 
 
-        else {
-        return "mypage";
-    }
-    @PostMapping("/logout")
-    public String logout(HttpServletRequest request) {
-
-        HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.invalidate();
-        }
-
-        return "redirect:/";
     }
 }
-
 
 
 
