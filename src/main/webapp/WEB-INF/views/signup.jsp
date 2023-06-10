@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <html lnag="ko">
     <head>
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <body>
         <div id="header">
 
-            <a href="index.html" target="_blank" title="WeaTherla 회원 가입 페이지"><img src="/img/m_logo_image.png" width="800" height="300" id="logo"></a>
+            <a href="/" target="_blank" title="WeaTherla 회원 가입 페이지"><img src="/img/m_logo_image.png" width="800" height="300" id="logo"></a>
 
         </div>
 

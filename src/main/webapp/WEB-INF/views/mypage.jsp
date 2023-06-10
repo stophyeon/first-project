@@ -1,5 +1,6 @@
 
-<!doctype html>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
 <html lang="en" class="h-100">
 
 <head>
@@ -29,11 +30,13 @@
 </head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
-
+<%
+    String name = (String)session.getAttribute("name");
+%>
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0">WeaTherIa</h3>
+      <h3 class="float-md-start mb-0"><%=name%>님의 페이지</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"></a>
       </nav>

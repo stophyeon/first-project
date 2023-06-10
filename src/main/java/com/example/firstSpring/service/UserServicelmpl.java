@@ -15,8 +15,6 @@ public class UserServicelmpl implements UserService {
     private final UserRepository userDAO;
     @Override
     public String insertUser(UserDTO userdto){
-
-
         User newuser = User.builder().email(userdto.getEmail()).name(userdto.getName())
                 .password(userdto.getPassword()).userid(userdto.getUserid()).gender(userdto.getGender())
                 .phoneNum(userdto.getPhoneNum()).birth(userdto.getBirth()).build();
@@ -26,17 +24,9 @@ public class UserServicelmpl implements UserService {
 
     @Override
     public boolean login(UserDTO userdto) {
-
         User userid= userDAO.findByUserid(userdto.getUserid());
-
-
-        if (userid != null && userid.getPassword().equals(userdto.getPassword())) {
-            return true;
-        } else {
-
-
-            return false;
-        }
+        if (userid != null && userid.getPassword().equals(userdto.getPassword())) {return true;}
+        else {return false;}
     }
 
 

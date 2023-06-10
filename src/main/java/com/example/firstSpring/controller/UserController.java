@@ -1,13 +1,18 @@
 package com.example.firstSpring.controller;
 
+import jakarta.servlet.http.HttpServletResponse;
+import org.springframework.ui.Model;
 import com.example.firstSpring.DTO.UserDTO;
-import com.example.firstSpring.entity.User;
 
 import com.example.firstSpring.service.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -20,8 +25,9 @@ public class UserController {
     public UserController(UserService userService) {
         this.service = userService;
     }
-    @GetMapping(value = "login")
-    public String login() {
+    @GetMapping("/login")
+    public String loginForm() {
+
         return "login";
     }
 
@@ -39,15 +45,32 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String login(UserDTO userdto){
+    public String login(@ModelAttribute @Validated UserDTO userdto, BindingResult bindingResult,
+                        HttpServletRequest request){
 
-        if (service.login(userdto)){
-            return "/mypage";
+        if (bindingResult.hasErrors()) {
+            return "login";
         }
-        else {
+        boolean loginUser = service.login(userdto);
+        if (loginUser == false) {
+            bindingResult.reject("loginFail", "아이디 또는 비밀번호가 맞지 않습니다.");
+            return "login";
+        }
+        HttpSession session = request.getSession();
+        session.setAttribute("name",userdto.getName());
+        System.out.println();
 
-            return "/login";
+        return "mypage";
+    }
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request) {
+
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.invalidate();
         }
+
+        return "redirect:/";
     }
 }
 
