@@ -30,13 +30,11 @@
 </head>
 
 <body class="d-flex h-100 text-center text-bg-dark">
-<%
-    String name = (String)session.getAttribute("name");
-%>
+
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="mb-auto">
     <div>
-      <h3 class="float-md-start mb-0"><%=name%>님의 페이지</h3>
+      <h3 class="float-md-start mb-0">WeaTherIa</h3>
       <nav class="nav nav-masthead justify-content-center float-md-end">
         <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#"></a>
       </nav>
@@ -85,10 +83,9 @@
       <input type="text" name="cloth" id="yourtop" readonly>
       <input type="text" name="cloth" id="yourbottom" readonly>
       <input type="text" name="cloth" id="youretc" readonly>
-    </div>
   </form>
   <!-- 실제 본인 설정한 옷 부 -->
-
+  </div>
 
 
 
@@ -107,7 +104,7 @@
 
 <div class="clothesroompage" id="clothesroompage"> <!---이 부 부터는 기존 clothesroompage, 즉. 옷을 입히는 부 구현-->
 
-  <button type="button" class="clothesroompageopen" id="clothesroompageopen" onclick=""><img src="/img/clothsbuttonimg.png"></button>
+  <button type="button" class="clothesroompageopen" id="clothesroompageopen" onclick=""><img src="clothsbuttonimg.png"></button>
   <div class="clothesroom-button" , id="clothesroom-button">
 
     <!---실제 옷장 .-->
@@ -182,8 +179,9 @@
   <span></span>
 </label>
 <div class="sidebar">
-  <button type="submit" class="join_link" id="log_btn" onclick="location.href='/'">로그아웃</button>
-
+  <form action="../main/index.html" method="get">
+    <button class="join_link" id="logout_btn" type="submit">로그아웃</button>
+  </form>
 </div>
 
 
@@ -191,7 +189,7 @@
 <title>toggle menu</title>
 <form action = "", id="sidebar1">
 
-  <div id="sidebar2" onclick="togglemenu()">
+  <div id="sidebar1" onclick="togglemenu()">
     <ul>
       <li>상세 정보</li>
       <li>시간대별</li>
@@ -201,7 +199,7 @@
     </div>
   </div>
 
-  <script src="/js/main/mainpage.js">
+  <script src="../../js/main/mainpage.js">
 
   </script>
 </form>

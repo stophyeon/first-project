@@ -6,7 +6,7 @@ import com.example.firstSpring.entity.User;
 
 public interface UserService {
     String insertUser(UserDTO userdto);
-    boolean login(UserDTO userDto); //컨트롤러에서 getter로 입력받음
+    boolean login(UserDTO userDto);
 
 }
 

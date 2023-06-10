@@ -1,8 +1,7 @@
 package com.example.firstSpring.controller;
 
-import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.ui.Model;
 import com.example.firstSpring.DTO.UserDTO;
+import com.example.firstSpring.entity.User;
 
 import com.example.firstSpring.service.UserService;
 
@@ -31,7 +30,10 @@ public class UserController {
         return "login";
     }
 
-
+    @GetMapping(value = "logout")
+    public String logout() {
+        return "index";
+    }
 
     @GetMapping("/signup")
     public String signupForm() {
@@ -60,6 +62,8 @@ public class UserController {
         session.setAttribute("name",userdto.getName());
         System.out.println();
 
+
+        else {
         return "mypage";
     }
     @PostMapping("/logout")
