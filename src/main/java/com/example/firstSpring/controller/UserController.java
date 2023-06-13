@@ -64,13 +64,7 @@ public class UserController {
     @PostMapping("/login")
     public String login(@ModelAttribute @Validated UserDTO userdto, BindingResult bindingResult,
                         HttpServletRequest request){
-/*
-        if (bindingResult.hasErrors()) {
-            System.out.println("로그인오류");
-            return "login";
-        }
 
- */
         boolean loginUser = service.login(userdto);
 
         if (loginUser == false) {

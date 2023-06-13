@@ -54,7 +54,7 @@
                         <input type="text" id="pswd1" class="int" name="password" maxlength="30">
                         <span id="alertTxt">사용불가</span>
 
-                        <img src="/static/img/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
+                        <img src="/img/m_icon_pass.png" id="pswd1_img1" class="pswdImg">
 
                     </span>
                     <% if (request.getAttribute("org.springframework.validation.BindingResult.member") != null) {
