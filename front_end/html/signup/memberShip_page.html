@@ -16,9 +16,10 @@
         </div>
 
         <div id= "wrapper">
-
-            <div id="content">
-
+            <main>
+                <form action="#" method="post" id="content">
+                    <fieldset>
+                        <legend class = "skip">회원가입 양식</legend>
                 <!-- 아이디 생성란(wheatherla 아이디로 ㅇㅇ) -->
                 <div>
                     <h3 class="join_title">
@@ -134,7 +135,7 @@
 
                 <!-- 전화번호 입력 란 -->
                 <div>
-                    <h3 class="join_title"><label for="phoneNo">전화번호</label></h3>
+                    <h3 class="join_title"><label for="mobile">전화번호</label></h3>
                     <span class="box int_mobile">
                         <input type="tel" id="mobile" class="int" maxlength="16" placeholder="전화번호 입력">
                     </span>
@@ -144,15 +145,15 @@
                 <div class="personTemper1">
                     <h3 class="join_title"><label for="personTemper">개인차</label></h3>
                         <label>
-                          <input type="radio" name="cold" value="colder">
+                          <input type="radio" name="personTemper" value="colder">
                           추위를 많이 타요!
                         </label>
                         <label>
-                          <input type="radio" name="hot" value="hotter">
+                          <input type="radio" name="personTemper" value="hotter">
                           더위를 많이 타요!
                         </label>
                         <label>
-                          <input type="radio" name="good" value="goodd">
+                          <input type="radio" name="personTemper" value="goodd">
                           평범해요!
                         </label>
                       </div>
@@ -162,20 +163,20 @@
                 <!-- 최종 가입 하기 버튼-->
                 <div class="btn_area">
 
-                    <button class="join_link" id="btnJoin" onclick="window.location.href='/front_end/html/login/login.html'">최종가입완료</button>
+                    <button class="join_link" id="btnJoin" onclick="window.location.href='../login/login.html'">최종가입완료</button>
 
                 </div>
                 
                 
-
-            </div> 
+            </fieldset>
+        </form>
+             
             <!-- content-->
-
+            </main>
         </div> 
         <!-- wrapper -->
 
     <script src="../../js/signup/main.js"></script>
-
     </body>
 
     <footer>

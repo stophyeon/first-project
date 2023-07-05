@@ -65,7 +65,6 @@ div[class="sidebar"] {width:300px;height:100%;background:#222;position:fixed;top
 input[id="menuicon"]:checked + label + div {right:0;}
 
 
-
   .weather-buttons {  
     background-color: #2C3E50;
     display: flex;

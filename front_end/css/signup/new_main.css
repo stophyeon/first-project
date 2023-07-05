@@ -3,7 +3,10 @@ html {
     height: 100%;
 }
 
-body {
+fieldset {border :0;}
+.skip {display: none;}
+
+main {
     margin: 0;
     height: 100%;
     background: #ffffff;
@@ -189,4 +192,5 @@ select {
 
 
 footer {
-    color: #333; text-align: center; font-size: 0.85rem; margin-top: 30px;}
+    color: #333; text-align: center; font-size: 0.85rem; margin-top: 30px;
+}

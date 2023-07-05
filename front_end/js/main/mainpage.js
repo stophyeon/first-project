@@ -173,11 +173,11 @@ function changeweatherpoint() {
 
   
  let hotimg = document.createElement('img');
- hotimg.src = '../main/hotimg.jpg';
+ hotimg.src = '../main/hotimg.png';
  let coldimg = document.createElement('img')
- coldimg.src = '../main/coldimg.jpg'
+ coldimg.src = '../main/coldimg.png'
  let goodimg = document.createElement('img')
- goodimg.src = '../main/goodimg.jpg'
+ goodimg.src = '../main/goodimg.png'
 
  var character = document.getElementById("character");
  
